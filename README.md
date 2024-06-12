@@ -1,4 +1,4 @@
-# Projeto para treino do Spring
+# Projeto para treino de API com Spring
 ## Configuração
 ```
 Java 17
