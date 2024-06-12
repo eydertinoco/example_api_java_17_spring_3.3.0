@@ -1,6 +1,12 @@
 package med.voll.api.record;
 
-import med.voll.api.shared.enums.Especialidade;
+import med.voll.api.enums.Especialidade;
 
-public record Medico(String nome, String email, String crm, Especialidade especialidade, Endereco endereco) {
+public record Medico(
+        String nome,
+        String email,
+        String crm,
+        Especialidade especialidade,
+        Endereco endereco
+) {
 }
