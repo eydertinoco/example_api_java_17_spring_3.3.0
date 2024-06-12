@@ -1,4 +1,4 @@
-package med.voll.api.shared.dto;
+package med.voll.api.record;
 
 import med.voll.api.shared.enums.Especialidade;
 
