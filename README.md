@@ -1,4 +1,4 @@
-# Projeto Alura
+# Projeto para treino do Spring
 ## Configuração
 ```
 Java 17
