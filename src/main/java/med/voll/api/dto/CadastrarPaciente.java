@@ -1,4 +1,4 @@
-package med.voll.api.record;
+package med.voll.api.dto;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record Paciente(
+public record CadastrarPaciente(
         @NotBlank
         String nome,
         @NotBlank
@@ -19,6 +19,6 @@ public record Paciente(
         String cpf,
         @NotNull
         @Valid
-        Endereco endereco
+        CadastrarEndereco endereco
 ) {
 }

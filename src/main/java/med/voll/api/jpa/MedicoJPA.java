@@ -6,8 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.enums.Especialidade;
-import med.voll.api.record.Endereco;
-import med.voll.api.record.Medico;
+import med.voll.api.dto.CadastrarMedico;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
@@ -34,7 +33,7 @@ public class MedicoJPA {
     @Embedded
     private EnderecoJPA enderecoJPA;
 
-    public MedicoJPA(Medico dadosMedico) {
+    public MedicoJPA(CadastrarMedico dadosMedico) {
         this.nome = dadosMedico.nome();
         this.email = dadosMedico.email();
         this.telefone = dadosMedico.telefone();

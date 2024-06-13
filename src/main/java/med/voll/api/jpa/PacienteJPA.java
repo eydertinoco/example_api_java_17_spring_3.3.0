@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.record.Paciente;
+import med.voll.api.dto.CadastrarPaciente;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
@@ -29,7 +29,7 @@ public class PacienteJPA {
     @Embedded
     private EnderecoJPA enderecoJPA;
 
-    public PacienteJPA(Paciente dadosPaciente) {
+    public PacienteJPA(CadastrarPaciente dadosPaciente) {
         this.nome = dadosPaciente.nome();
         this.email = dadosPaciente.email();
         this.cpf = dadosPaciente.cpf();

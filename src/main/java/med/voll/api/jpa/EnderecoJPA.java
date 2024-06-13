@@ -4,7 +4,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.record.Endereco;
+import med.voll.api.dto.CadastrarEndereco;
 
 @Embeddable
 @Getter
@@ -19,7 +19,7 @@ public class EnderecoJPA {
     private String cidade;
     private String uf;
 
-    public EnderecoJPA(Endereco dadosEndereco) {
+    public EnderecoJPA(CadastrarEndereco dadosEndereco) {
         this.logradouro = dadosEndereco.logradouro();
         this.bairro = dadosEndereco.bairro();
         this.cep = dadosEndereco.cep();

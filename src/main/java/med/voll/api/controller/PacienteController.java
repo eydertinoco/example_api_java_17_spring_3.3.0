@@ -2,7 +2,7 @@ package med.voll.api.controller;
 
 import jakarta.validation.Valid;
 import med.voll.api.jpa.PacienteJPA;
-import med.voll.api.record.Paciente;
+import med.voll.api.dto.CadastrarPaciente;
 import med.voll.api.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ public class PacienteController {
     private PacienteRepository pacienteRepository;
 
     @PostMapping
-    public void cadastrar(@RequestBody @Valid Paciente paciente) {
+    public void cadastrar(@RequestBody @Valid CadastrarPaciente paciente) {
         pacienteRepository.save(new PacienteJPA(paciente));
     }
 }
