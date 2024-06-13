@@ -24,6 +24,8 @@ public class MedicoJPA {
 
     private String email;
 
+    private String telefone;
+
     private String crm;
 
     @Enumerated(EnumType.STRING)
@@ -35,6 +37,7 @@ public class MedicoJPA {
     public MedicoJPA(Medico dadosMedico) {
         this.nome = dadosMedico.nome();
         this.email = dadosMedico.email();
+        this.telefone = dadosMedico.telefone();
         this.crm = dadosMedico.crm();
         this.especialidade = dadosMedico.especialidade();
         this.enderecoJPA = new EnderecoJPA(dadosMedico.endereco());
