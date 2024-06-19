@@ -34,6 +34,8 @@ public class MedicoJPA {
     @Embedded
     private EnderecoJPA enderecoJPA;
 
+    private Boolean ativo;
+
     public MedicoJPA(CadastrarMedico dadosMedico) {
         this.nome = dadosMedico.nome();
         this.email = dadosMedico.email();
@@ -41,6 +43,7 @@ public class MedicoJPA {
         this.crm = dadosMedico.crm();
         this.especialidade = dadosMedico.especialidade();
         this.enderecoJPA = new EnderecoJPA(dadosMedico.endereco());
+        this.ativo = true;
     }
 
     public void atualizarInformacoes(AtualizarMedico dados) {
@@ -53,6 +56,10 @@ public class MedicoJPA {
         if (dados.endereco() != null) {
             this.enderecoJPA.atualizarInformacoes(dados.endereco());
         }
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 
 }
