@@ -9,6 +9,7 @@ import med.voll.api.jpa.MedicoJPA;
 import med.voll.api.jpa.PacienteJPA;
 
 public record ListagemPacientes(
+        Long id,
         @NotBlank
         String nome,
         @NotBlank
@@ -19,6 +20,6 @@ public record ListagemPacientes(
         String cpf
 ) {
     public ListagemPacientes(PacienteJPA paciente) {
-        this(paciente.getNome(), paciente.getEmail(), paciente.getCpf());
+        this(paciente.getId(), paciente.getNome(), paciente.getEmail(), paciente.getCpf());
     }
 }

@@ -8,6 +8,7 @@ import med.voll.api.enums.Especialidade;
 import med.voll.api.jpa.MedicoJPA;
 
 public record ListagemMedicos(
+        Long id,
         @NotBlank
         String nome,
         @NotBlank
@@ -20,6 +21,6 @@ public record ListagemMedicos(
         Especialidade especialidade
 ) {
     public ListagemMedicos(MedicoJPA medico) {
-        this(medico.getNome(), medico.getEmail(), medico.getCrm(), medico.getEspecialidade());
+        this(medico.getId(), medico.getNome(), medico.getEmail(), medico.getCrm(), medico.getEspecialidade());
     }
 }
