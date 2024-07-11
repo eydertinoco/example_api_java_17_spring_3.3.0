@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
+    private final PacienteRepository pacienteRepository;
+
     @Autowired
-    private PacienteRepository pacienteRepository;
+    public PacienteController(PacienteRepository pacienteRepository) {
+        this.pacienteRepository = pacienteRepository;
+    }
 
     @PostMapping
     public void cadastrar(@RequestBody @Valid CadastrarPaciente paciente) {

@@ -1,0 +1,16 @@
+version: "1.0"
+linter: jetbrains/qodana-jvm:2024.1
+include:
+  - name: UNUSED_IMPORT
+  - name: AssertEqualsCalledOnArray
+  - name: AssertEqualsMayBeAssertSame
+  - name: IgnoredJUnitTest
+  - name: MultipleExceptionsDeclaredOnTestMethod
+  - name: JUnitMalformedDeclaration
+  - name: MigrateAssertToMatcherAssert
+  - name: JUnitMixedFramework
+  - name: JUnit5AssertionsConverter
+  - name: JUnit5Converter
+  - name: ExpectedExceptionNeverThrown
+  - name: TestMethodWithoutAssertion
+  - name: TestOnlyProblems

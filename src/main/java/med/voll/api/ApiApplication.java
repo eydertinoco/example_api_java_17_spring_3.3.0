@@ -14,7 +14,7 @@ public class ApiApplication {
 	}
 
 	@Configuration
-	public class CorsConfiguration implements WebMvcConfigurer {
+	public static class CorsConfiguration implements WebMvcConfigurer {
 
 		@Override
 		public void addCorsMappings(CorsRegistry registry) {
