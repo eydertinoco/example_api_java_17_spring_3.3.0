@@ -2,10 +2,7 @@ package med.voll.api.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import med.voll.api.enums.Especialidade;
-import med.voll.api.jpa.MedicoJPA;
 import med.voll.api.jpa.PacienteJPA;
 
 public record ListagemPacientes(
@@ -16,7 +13,7 @@ public record ListagemPacientes(
         @Email
         String email,
         @NotBlank
-        @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
+        @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}")
         String cpf
 ) {
     public ListagemPacientes(PacienteJPA paciente) {
